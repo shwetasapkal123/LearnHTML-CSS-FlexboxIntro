@@ -1,40 +1,36 @@
-<title>Example2</title>
-<style>             
-  * {                           /*Display only Nav,Header,Article,Aside,Footer*/
+<title>Website layout Example3</title>
+<style>
+  * {
     box-sizing: border-box; 
   }
- body {
-    display: flex;              /*Nav goes to the left corner.......display flex is for that purpose*/
-    min-height: 100vh;          /*and Nav is 1 col*/
+  body {
+    display: flex;
+    min-height: 100vh;
     flex-direction: row;
     margin: 0;
   }
-   .col-1 {                     /*Cange background color of Nav col*/
+  .col-1 {
     background: #D7E8D4;
     flex: 1;
   }
- .col-2 {                       /* reduce the Nav col size......col 2 is Headrfooter article*/
+  .col-2 {
     display: flex;
     flex-direction: column;
     flex: 5;
   }
-   .content {
+  .content {
     display: flex;
     flex-direction: row;
   }
-  .content > article {           /* keep distance bet article and footer and aside*/
-    flex: 3;
+  .content > article {
+    flex: 4;
     min-height: 60vh;
   }
-  .content > aside {             /*changed colour of aside block */
-    background: beige;
-    flex: 1;
-  }
- header, footer {                   /*changed colour of header footer block */
+  header, footer {
     background: yellowgreen;
     height: 20vh;
   }
-    header, footer, article, nav, aside {
+  header, footer, article, nav {
     padding: 1em;
   }
 </style>
@@ -44,7 +40,6 @@
   	<header>Header</header>
     <main class="content">
     <article>Article</article>
-    <aside>Aside</aside>
     </main>
   	<footer>Footer</footer>
   </div>
