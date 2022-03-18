@@ -1,47 +1,27 @@
 <title>Example</title>
 <style>
-  .cards {
+  .media {
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+    align-items: flex-start;
+    background: #F6F3EB;
+    padding: 1em;
+    border-radius: 3px;
+    max-width: 24em;
   }
-  .card {
-    flex: 0 0 200px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  } 
-  .card img {
-    max-width: 100%;
+  .media-object {
+    margin-right: 1em;
   }
-  .card .text {
-    padding: 0 20px 20px;
+  .media-body {
+    flex: 1;
   }
-  .card .text > button {
-    background: gray;
-    border: 0;
-    color: white;
-    padding: 10px;
-    width: 100%;
-    }
+  .media-heading {
+    margin: 0 0 .5em;
+  }
 </style>
-
-<main class="cards">
-  <article class="card">
-    <img src="../assets/cards1.jpg" alt="Sample photo">
-    <div class="text">
-      <h3>Seamlessly visualize quality</h3>
-      <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
-      <button>Here's why</button>
-    </div>
-  </article>
-  <article class="card">
-    <img src="../assets/cards2.jpg" alt="Sample photo">
-    <div class="text">
-      <h3>Completely Synergize</h3>
-      <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
-      <button>Here's how</button>
-    </div>
-  </article>
-  
-</main>
+<div class="media">
+  <img class="media-object" src="../assets/mediaObject1.jpg" alt="Sample photo">
+  <div class="media-body">
+    <h3 class="media-heading">Organically Synthesized</h3>
+    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+  </div>
+</div>
