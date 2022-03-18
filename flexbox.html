@@ -1,0 +1,48 @@
+<title>Example</title>
+<style>
+  * {               /*shows header nav article footer*/
+    box-sizing: border-box; 
+  }
+  body {                    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+   #main {      /*footer goes down*/
+    display: flex;
+    flex: 1;
+  }
+#main > article {       /*separate article at particular distance*/
+    flex: 1;
+    order: 1;
+  }
+   #main > nav, 
+  #main > aside {           /*separate nav and aside at given distance*/
+    flex: 0 0 20vw;
+  }
+   #main > nav {                /*added colour to Nav block*/
+    background: #D7E8D4;
+    order: 3;
+  }
+ #main > aside {                 /*Added color to aside block*/
+    background: rgb(225, 220, 245);
+    order: 2;
+  }
+  header, footer {              /*Added color to header footer*/
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {          /*keep distance of words from border line*/
+    padding: 1em;
+  }
+</style>
+<body>
+  <header>Header</header>
+  <div id="main">
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>*/
