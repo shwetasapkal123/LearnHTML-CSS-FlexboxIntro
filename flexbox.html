@@ -1,48 +1,51 @@
-<title>Example</title>
-<style>
-  * {               /*shows header nav article footer*/
+<title>Example2</title>
+<style>             
+  * {                           /*Display only Nav,Header,Article,Aside,Footer*/
     box-sizing: border-box; 
   }
-  body {                    
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+ body {
+    display: flex;              /*Nav goes to the left corner.......display flex is for that purpose*/
+    min-height: 100vh;          /*and Nav is 1 col*/
+    flex-direction: row;
     margin: 0;
   }
-   #main {      /*footer goes down*/
-    display: flex;
-    flex: 1;
-  }
-#main > article {       /*separate article at particular distance*/
-    flex: 1;
-    order: 1;
-  }
-   #main > nav, 
-  #main > aside {           /*separate nav and aside at given distance*/
-    flex: 0 0 20vw;
-  }
-   #main > nav {                /*added colour to Nav block*/
+   .col-1 {                     /*Cange background color of Nav col*/
     background: #D7E8D4;
-    order: 3;
+    flex: 1;
   }
- #main > aside {                 /*Added color to aside block*/
-    background: rgb(225, 220, 245);
-    order: 2;
+ .col-2 {                       /* reduce the Nav col size......col 2 is Headrfooter article*/
+    display: flex;
+    flex-direction: column;
+    flex: 5;
   }
-  header, footer {              /*Added color to header footer*/
+   .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {           /* keep distance bet article and footer and aside*/
+    flex: 3;
+    min-height: 60vh;
+  }
+  .content > aside {             /*changed colour of aside block */
+    background: beige;
+    flex: 1;
+  }
+ header, footer {                   /*changed colour of header footer block */
     background: yellowgreen;
     height: 20vh;
   }
-  header, footer, article, nav, aside {          /*keep distance of words from border line*/
+    header, footer, article, nav, aside {
     padding: 1em;
   }
 </style>
 <body>
-  <header>Header</header>
-  <div id="main">
+  <nav class="col-1">Nav</nav>
+  <div class="col-2">
+  	<header>Header</header>
+    <main class="content">
     <article>Article</article>
-    <nav>Nav</nav>
     <aside>Aside</aside>
+    </main>
+  	<footer>Footer</footer>
   </div>
-  <footer>Footer</footer>
-</body>*/
+</body>
